@@ -12,7 +12,7 @@ if (isset($_POST["Register_Now"])) {
         echo mysqli_connect_error();
     } else {
         // Insert query to add user into the clients table
-        $query = "INSERT INTO `clients`(`Name`, `Email`, `Password`,`Check_admin`) VALUES ('$name', '$email', '$password',,'$check')";
+        $query = "INSERT INTO `clients`(`Name`, `Email`, `Password`,`Check_admin`) VALUES ('$name', '$email', '$password','$check')";
         
         if (mysqli_query($conn, $query)) {
             // Registration successful, redirect to login page
